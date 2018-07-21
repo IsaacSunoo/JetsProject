@@ -1,7 +1,7 @@
 
 public class CargoCarrier extends CargoPlane {
-
-	public void loadCargo() {
-		
+	
+	public CargoCarrier(String model, double speed, int range, long price) {
+		super(model, speed, range, price);
 	}
 }

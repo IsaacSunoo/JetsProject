@@ -1,10 +1,17 @@
 
-public abstract class Jet extends AirField {
+public abstract class Jet {
 	private String model;
 	private double speed;
 	private int range;
 	private long price;
 
+	public Jet(String model, double speed, int range, long price) {
+		setModel(model);
+		setSpeed(speed);
+		setRange(range);
+		setPrice(price);
+	}
+	
 	public String getModel() {
 		return model;
 	}
@@ -19,6 +26,11 @@ public abstract class Jet extends AirField {
 
 	public void setSpeed(double speed) {
 		this.speed = speed;
+	}
+
+	@Override
+	public String toString() {
+		return "Jet model: " + model + ", speed: " + speed + ", range: " + range + ", price: " + price ;
 	}
 
 	public int getRange() {
@@ -37,13 +49,9 @@ public abstract class Jet extends AirField {
 		this.price = price;
 	}
 
-	public String jets(String model, double speed, int range, long price) {
-		String jet = null;
-
-		return jet;
-	}
 
 	public void fly() {
+		System.out.println(getModel() + " takes flight!");
 
 	}
 	
@@ -53,8 +61,4 @@ public abstract class Jet extends AirField {
 		return speed;
 	}
 
-//	jets[0] = "B-2 Spirit";
-//	jets[1] = "F-117 NightHawk";
-//	jets[2] = "F-35 Lightning";
-//	
 }
