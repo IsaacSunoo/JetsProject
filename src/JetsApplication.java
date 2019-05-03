@@ -21,8 +21,7 @@ public class JetsApplication {
 	private void displayUserMenu(AirField airfield) {
 
 		Scanner sc = new Scanner(System.in);
-		System.out.println(
-				"1. List fleet\n2. Fly all jets\n3. View the fastest jet\n4. View jet with longest range\n5. Load all Cargo Jets");
+		System.out.println("1. List fleet\n2. Fly all jets\n3. View the fastest jet\n4. View jet with longest range\n5. Load all Cargo Jets");
 		System.out.println("6. Add a jet to Fleet\n7. Quit");
 		int input = sc.nextInt();
 
@@ -36,7 +35,6 @@ public class JetsApplication {
 				break;
 			case 3:
 				System.out.println("The fastest Jet is: " + airfield.fastestJet());
-
 				break;
 			case 4:
 				System.out.println("The longest range jet is: " + airfield.longestRange());
@@ -55,9 +53,8 @@ public class JetsApplication {
 			default:
 				System.err.println("Please enter 1-7.");
 			}
-			System.out
-					.println("1. List fleet\n2. Fly all jets\n3. View jet with longest range\n5. Load all Cargo Jets");
-			System.out.println("6. DogFight!\n7. Add a jet to Fleet\n8. Quit");
+			System.out.println("1. List fleet\n2. Fly all jets\n3. View the fastest jet\n4. View jet with longest range\n5. Load all Cargo Jets");
+			System.out.println("6. Add a jet to Fleet\n7. Quit");
 			input = sc.nextInt();
 		}
 	}
